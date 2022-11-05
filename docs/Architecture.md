@@ -1,136 +1,14 @@
 # アーキテクチャ
 
-下記のことを考慮して、[VIPER](https://cheesecakelabs.com/blog/ios-project-architecture-using-viper/)をベースにします。
+the Composable Architecture、通称 TCA を採用します。
 
-- チームでのアプリ開発
-- マルチフレームワーク
-  - ビルド時間高速化
-  - サンドボックス環境構築可
-- エラーハンドリング
-- テスタブル
-- アプリ起動（ディープリンク等）
+TBA
 
-推奨アーキテクチャではマルチフレームワークの形式をとっています。
-個別のフレームワークの説明の前に、先にフレームワークの依存関係を記載します。
+## 参考
 
-```
-
-  +-----------------------------------------------+
-  |  Application Layer                            |
-  |                                               |
-  |  +-----------------------------------------+  |
-  |  |  Application                            |  |
-  |  +-----------------------------------------+  |
-  |        |              |              |        |
-  |        v              v              v        |
-  |  +-----------+  +-----------+  +-----------+  |
-  |  |  Feature  |  |  Feature  |  |  Feature  |  |
-  |  +-----------+  +-----------+  +-----------+  |
-  |        |              |              |        |
-  |        v              v              v        |
-  |  +-----------------------------------------+  |
-  |  |  Core                                   |  |
-  |  +-----------------------------------------+  |
-  |                                               |
-  +-----------------------------------------------+
-    |     |
-    |     v
-    |   +---------------+
-    |   |  Domain       |
-    |   +---------------+
-    |     |       |
-    v     v       v
-  +----------+  +-------+
-  |  Common  |  |  API  |
-  +----------+  +-------+
-
-```
-
-## フレームワーク
-
-各フレームワークについて説明します。
-
-### Common
-
-アプリに依存しない共通コードをまとめるフレームワークです。他のどのフレームワークにも依存しません。
-
-### API
-
-API(Request/Response)に関する処理をまとめるフレームワークです。App、Domain からのみ参照されます。
-
-### Domain
-
-アプリのビジネスロジックをまとめるフレームワークです。
-主に、Entity や Infrastructure の I/F が含まれます。
-Application レイヤーの全てのフレームワークから参照されます。
-
-### Core
-
-Application レイヤーで共通的に利用するコードをまとめるフレームワークです。
-画面遷移に関する I/F、ErrorHandler の I/F などが含まれます。
-
-### Feature
-
-アプリの各機能を実現するコード（UI を含む）をまとめるフレームワークです。
-Domain、Core を参照し、アプリの機能を実現します。
-
-### App
-
-Feature フレームワークなど、ほぼ全てのフレームワークを参照し、アプリケーションを構築するフレームワークです。
-AppDelegate、SceneDelegate はここに含まれます。
-
-## コントロールフロー
-
-下記にコントロールフローを記載します。
-
-```
-      (1)
-    +-------------------------------------+
-    |                                     |
-    |                                     |
-  +------------------+  +-----------------|--------+
-  |  ViewController  |  |  Presenter      | (2)    |
-  |                  |  |                 v        |
-  |                  |  |  +--------------------+  |
-  |                  |  |  |  UseCase           |  |
-  |                  |  |  |                    |  |
-  |                  |  |  |                    |  |
-  |                  |  |  +--------------------+  |
-  |                  |  |       |                  |
-  |                  |  |       | (3)              |
-  |                  |  |       V                  |
-  |                  |  |  +---------+             |
-  |                  |  |  |  State  |             |
-  |                  |  |  +---------+             |
-  |                  |  |    |                     |
-  +------------------+  +----|---------------------+
-    ^                        |
-    |                        |
-    +------------------------+
-      (4)
-
-```
-
-(1) View レイヤーからのイベント（ボタンタップ、画面表示後等）を Presenter レイヤーに通知します。
-<br/>
-(2) UseCase でイベントに応じた処理を実行します。
-<br/>
-(3) 更新された Presenter の State を View レイヤーに通知します。
-
-※ (4)に関しては Delegate、Closure、Reactive Programming 等を用いて関数の直接呼び出しではない方法で実現します。
-
-## 画面遷移
-
-アプリ起動経路（ディープリンクなど）のハンドリングを実装するため、[FlowController](https://dev.to/onmyway133/coordinator-and-flowcontroller-8cg)パターンを採用します。
-FlowController パターンはアプリ内の画面遷移をハンドリングする`FlowController`を導入するパターンです。
-<br/>
-例えば下記のようになります。
-
-```
-+ RootFlowController
-├── LoginFlowController
-│   ├── SignUpViewController
-│   └── SignInViewController
-└── MainFlowController
-    └── MainTabController
-```
+- [the Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture)
+- [the Composable Architecture (日本語)](https://gist.github.com/kalupas226/bdf577e4a7066377ea0a8aaeebcad428)
+- [The Composable Architecture(TCA)の紹介と少し使った所感](https://qiita.com/tonionagauzzi/items/a97a7303b546e515fc9b)
+- [the Composable Architecture の始め方](https://qiita.com/zeero/items/b77cb689d9a707d94ac7)
+- [Composable Architecture を利用した Todo アプリの紹介（Part 1）](https://qiita.com/kalupas226/items/2c9680396b039fc7499b)
+- [CA.swift #14 - モジュール分割した開発での知見とテーマ切り替えや UICatalog について](https://www.youtube.com/watch?v=MQWW84lg9xc&t=2004s)
