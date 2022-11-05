@@ -14,6 +14,7 @@
 		B38C96ED29162FFA00CA892D /* oshigotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C96EC29162FFA00CA892D /* oshigotoTests.swift */; };
 		B38C96F729162FFA00CA892D /* oshigotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C96F629162FFA00CA892D /* oshigotoUITests.swift */; };
 		B38C96F929162FFA00CA892D /* oshigotoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C96F829162FFA00CA892D /* oshigotoUITestsLaunchTests.swift */; };
+		B3B905D529165099001F25B8 /* Sample in Frameworks */ = {isa = PBXBuildFile; productRef = B3B905D429165099001F25B8 /* Sample */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		B38C96F229162FFA00CA892D /* oshigotoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oshigotoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38C96F629162FFA00CA892D /* oshigotoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oshigotoUITests.swift; sourceTree = "<group>"; };
 		B38C96F829162FFA00CA892D /* oshigotoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oshigotoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B3B905D229164C2C001F25B8 /* Oshigoto */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Oshigoto; path = ../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B905D529165099001F25B8 /* Sample in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +77,12 @@
 		B38C96CF29162FF900CA892D = {
 			isa = PBXGroup;
 			children = (
+				B3B905D229164C2C001F25B8 /* Oshigoto */,
 				B38C96DA29162FF900CA892D /* oshigoto */,
 				B38C96EB29162FFA00CA892D /* oshigotoTests */,
 				B38C96F529162FFA00CA892D /* oshigotoUITests */,
 				B38C96D929162FF900CA892D /* Products */,
+				B3B905D329165099001F25B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +132,13 @@
 			path = oshigotoUITests;
 			sourceTree = "<group>";
 		};
+		B3B905D329165099001F25B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +155,9 @@
 			dependencies = (
 			);
 			name = oshigoto;
+			packageProductDependencies = (
+				B3B905D429165099001F25B8 /* Sample */,
+			);
 			productName = oshigoto;
 			productReference = B38C96D829162FF900CA892D /* oshigoto.app */;
 			productType = "com.apple.product-type.application";
@@ -583,6 +598,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B3B905D429165099001F25B8 /* Sample */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Sample;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B38C96D029162FF900CA892D /* Project object */;
 }

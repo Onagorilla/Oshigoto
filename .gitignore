@@ -1,0 +1,10 @@
+.DS_Store
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/
+*.build
+.iso-env
+.private
+App/.swiftpm
+/Package.resolved
