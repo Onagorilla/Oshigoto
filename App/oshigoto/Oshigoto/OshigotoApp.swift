@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
+import TicketFeature
 
 @main
-struct oshigotoApp: App {
+struct OshigotoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TicketsView(
+                store: Store(
+                    initialState: TicketsState(),
+                    reducer: TicketsReducer()
+                )
+            )
         }
     }
 }
