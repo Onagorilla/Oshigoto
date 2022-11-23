@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B38C96DC29162FF900CA892D /* oshigotoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C96DB29162FF900CA892D /* oshigotoApp.swift */; };
+		B38C96DC29162FF900CA892D /* OshigotoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C96DB29162FF900CA892D /* OshigotoApp.swift */; };
 		B38C96DE29162FF900CA892D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C96DD29162FF900CA892D /* ContentView.swift */; };
 		B38C96E029162FFA00CA892D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38C96DF29162FFA00CA892D /* Assets.xcassets */; };
 		B38C96E329162FFA00CA892D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38C96E229162FFA00CA892D /* Preview Assets.xcassets */; };
 		B38C96ED29162FFA00CA892D /* oshigotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C96EC29162FFA00CA892D /* oshigotoTests.swift */; };
 		B38C96F729162FFA00CA892D /* oshigotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C96F629162FFA00CA892D /* oshigotoUITests.swift */; };
 		B38C96F929162FFA00CA892D /* oshigotoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C96F829162FFA00CA892D /* oshigotoUITestsLaunchTests.swift */; };
+		B3AAE696292E0F780033586F /* TicketFeature in Frameworks */ = {isa = PBXBuildFile; productRef = B3AAE695292E0F780033586F /* TicketFeature */; };
 		B3B905D529165099001F25B8 /* Sample in Frameworks */ = {isa = PBXBuildFile; productRef = B3B905D429165099001F25B8 /* Sample */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		B38C96D829162FF900CA892D /* oshigoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oshigoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B38C96DB29162FF900CA892D /* oshigotoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oshigotoApp.swift; sourceTree = "<group>"; };
+		B38C96DB29162FF900CA892D /* OshigotoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OshigotoApp.swift; sourceTree = "<group>"; };
 		B38C96DD29162FF900CA892D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B38C96DF29162FFA00CA892D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B38C96E229162FFA00CA892D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3B905D529165099001F25B8 /* Sample in Frameworks */,
+				B3AAE696292E0F780033586F /* TicketFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				B3B905D229164C2C001F25B8 /* Oshigoto */,
-				B38C96DA29162FF900CA892D /* oshigoto */,
-				B38C96EB29162FFA00CA892D /* oshigotoTests */,
-				B38C96F529162FFA00CA892D /* oshigotoUITests */,
+				B38C96DA29162FF900CA892D /* Oshigoto */,
+				B38C96EB29162FFA00CA892D /* OshigotoTests */,
+				B38C96F529162FFA00CA892D /* OshigotoUITests */,
 				B38C96D929162FF900CA892D /* Products */,
 				B3B905D329165099001F25B8 /* Frameworks */,
 			);
@@ -96,15 +98,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B38C96DA29162FF900CA892D /* oshigoto */ = {
+		B38C96DA29162FF900CA892D /* Oshigoto */ = {
 			isa = PBXGroup;
 			children = (
-				B38C96DB29162FF900CA892D /* oshigotoApp.swift */,
+				B38C96DB29162FF900CA892D /* OshigotoApp.swift */,
 				B38C96DD29162FF900CA892D /* ContentView.swift */,
 				B38C96DF29162FFA00CA892D /* Assets.xcassets */,
 				B38C96E129162FFA00CA892D /* Preview Content */,
 			);
-			path = oshigoto;
+			path = Oshigoto;
 			sourceTree = "<group>";
 		};
 		B38C96E129162FFA00CA892D /* Preview Content */ = {
@@ -115,21 +117,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B38C96EB29162FFA00CA892D /* oshigotoTests */ = {
+		B38C96EB29162FFA00CA892D /* OshigotoTests */ = {
 			isa = PBXGroup;
 			children = (
 				B38C96EC29162FFA00CA892D /* oshigotoTests.swift */,
 			);
-			path = oshigotoTests;
+			path = OshigotoTests;
 			sourceTree = "<group>";
 		};
-		B38C96F529162FFA00CA892D /* oshigotoUITests */ = {
+		B38C96F529162FFA00CA892D /* OshigotoUITests */ = {
 			isa = PBXGroup;
 			children = (
 				B38C96F629162FFA00CA892D /* oshigotoUITests.swift */,
 				B38C96F829162FFA00CA892D /* oshigotoUITestsLaunchTests.swift */,
 			);
-			path = oshigotoUITests;
+			path = OshigotoUITests;
 			sourceTree = "<group>";
 		};
 		B3B905D329165099001F25B8 /* Frameworks */ = {
@@ -157,6 +159,7 @@
 			name = oshigoto;
 			packageProductDependencies = (
 				B3B905D429165099001F25B8 /* Sample */,
+				B3AAE695292E0F780033586F /* TicketFeature */,
 			);
 			productName = oshigoto;
 			productReference = B38C96D829162FF900CA892D /* oshigoto.app */;
@@ -273,7 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B38C96DE29162FF900CA892D /* ContentView.swift in Sources */,
-				B38C96DC29162FF900CA892D /* oshigotoApp.swift in Sources */,
+				B38C96DC29162FF900CA892D /* OshigotoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +603,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B3AAE695292E0F780033586F /* TicketFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TicketFeature;
+		};
 		B3B905D429165099001F25B8 /* Sample */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Sample;
