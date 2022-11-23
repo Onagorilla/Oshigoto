@@ -6,5 +6,6 @@ xcuserdata/
 *.build
 .iso-env
 .private
+/.swiftpm
 App/.swiftpm
 /Package.resolved
