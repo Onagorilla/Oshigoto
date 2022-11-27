@@ -1,6 +1,6 @@
 //
 //  TicketsState.swift
-//  
+//
 //
 //  Created by 釘宮愼之介 on 2022/11/13.
 //
@@ -10,8 +10,8 @@ import ComposableArchitecture
 
 public struct TicketsState: Equatable {
     public var loading: Bool = false
-    public var tickets: TicketsBodyState? = nil
-    
+    public var tickets: TicketsBodyState?
+
     public init() {}
 }
 

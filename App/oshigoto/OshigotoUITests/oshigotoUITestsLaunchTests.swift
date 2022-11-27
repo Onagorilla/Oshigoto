@@ -1,13 +1,13 @@
 //
-//  oshigotoUITestsLaunchTests.swift
-//  oshigotoUITests
+//  OshigotoUITestsLaunchTests.swift
+//  OshigotoUITests
 //
 //  Created by 釘宮愼之介 on 2022/11/05.
 //
 
 import XCTest
 
-final class oshigotoUITestsLaunchTests: XCTestCase {
+final class OshigotoUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

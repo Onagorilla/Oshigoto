@@ -1,6 +1,6 @@
 //
 //  TicketsReducerTest.swift
-//  
+//
 //
 //  Created by 釘宮愼之介 on 2022/11/26.
 //
@@ -26,7 +26,7 @@ class TicketsReducerTest: XCTestCase {
         store.dependencies.ticketRepository = TicketRepository(fetch: {
             return tickets
         })
-        
+
         await store.send(.initilize) {
             $0.loading = true
         }

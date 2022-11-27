@@ -1,6 +1,6 @@
 //
 //  TicketsAction.swift
-//  
+//
 //
 //  Created by 釘宮愼之介 on 2022/11/23.
 //
