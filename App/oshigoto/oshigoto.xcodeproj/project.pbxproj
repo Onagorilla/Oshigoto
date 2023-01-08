@@ -287,7 +287,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "swift run -c release --package-path Tools swiftlint --fix --format\nswift run -c release --package-path Tools swiftlint\n";
+			shellScript = "xcrun --sdk macosx swift run -c release --package-path ../../Tools swiftlint --fix --format\nxcrun --sdk macosx swift run -c release --package-path ../../Tools swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
